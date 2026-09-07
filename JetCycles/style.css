@@ -301,3 +301,214 @@
       .quick-item{border-right:0;border-bottom:1px solid rgba(255,255,255,.25)}
       section{padding:60px 18px}
     }
+.promise-card {
+  background: #fff;
+  color: #111;
+}
+
+.promise-card h3 {
+  color: #111;
+}
+
+.promise-card p {
+  color: #333;
+}
+
+/* =========================================
+   CLEAN CONTACT FORM OVERRIDE
+   ========================================= */
+
+.contact-form-section {
+  padding: 10px 0;
+}
+
+.contact-form-section .eyebrow {
+  color: var(--red);
+  margin-bottom: 10px;
+}
+
+.contact-form-section h2 {
+  font-size: clamp(34px, 4vw, 48px);
+  line-height: 1;
+  margin-bottom: 12px;
+}
+
+.contact-form-section .form-intro {
+  color: #666;
+  max-width: 600px;
+  margin-bottom: 30px;
+}
+
+/* Form spacing */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Two-column rows */
+.contact-form .form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+/* Individual field */
+.contact-form .form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+/* Labels */
+.contact-form .form-field label {
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .7px;
+  color: #222;
+}
+
+/* Inputs */
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  border: 1px solid #d2d2d2;
+  background: #f8f8f8;
+  color: #222;
+  padding: 14px 15px;
+  border-radius: 3px;
+  font-family: inherit;
+  font-size: 15px;
+  outline: none;
+  transition:
+    border-color .2s ease,
+    background .2s ease,
+    box-shadow .2s ease;
+}
+
+/* Placeholder */
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #999;
+}
+
+/* Focus effect */
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+  border-color: var(--red);
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(225, 6, 0, .08);
+}
+
+/* Dropdown */
+.contact-form select {
+  cursor: pointer;
+  appearance: auto;
+}
+
+/* Message */
+.contact-form textarea {
+  min-height: 180px;
+  resize: vertical;
+}
+
+/* Send button */
+.contact-form .form-submit {
+  align-self: flex-start;
+  border: 0;
+  cursor: pointer;
+  padding: 15px 28px;
+  font-size: 14px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .4px;
+  transition:
+    transform .2s ease,
+    box-shadow .2s ease;
+}
+
+.contact-form .form-submit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(225, 6, 0, .22);
+}
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 700px) {
+
+  .contact-form .form-row {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .contact-form-section h2 {
+    font-size: 34px;
+  }
+
+  .contact-form textarea {
+    min-height: 150px;
+  }
+
+  .contact-form .form-submit {
+    width: 100%;
+    text-align: center;
+  }
+
+}
+/* =========================================
+ABOUT PAGE - COMMUNITY PHOTO GALLERY
+========================================= */
+
+.story-gallery {
+display: grid;
+grid-template-columns: 1fr 1fr;
+grid-template-rows: 1fr 1fr;
+gap: 8px;
+padding: 8px;
+background: #111;
+min-height: 450px;
+}
+
+.story-gallery .gallery-photo {
+overflow: hidden;
+min-height: 210px;
+}
+
+.story-gallery .gallery-photo img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+transition: transform .35s ease;
+}
+
+.story-gallery .gallery-photo:hover img {
+transform: scale(1.05);
+}
+
+/* Mobile */
+@media (max-width: 850px) {
+.story-gallery {
+min-height: 360px;
+}
+
+.story-gallery .gallery-photo {
+min-height: 170px;
+}
+}
+
+@media (max-width: 600px) {
+.story-gallery {
+min-height: 500px;
+grid-template-columns: 1fr 1fr;
+gap: 6px;
+}
+
+.story-gallery .gallery-photo {
+min-height: 180px;
+}
+}
