@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2022 Honda Sport | Your Bikes</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="topbar">
+  <div class="topbar-inner">
+    <span>📍 123 Main Street, Your City, FL</span>
+    <span>📞 (555) 555-5555 &nbsp; | &nbsp; Mon–Sat 9AM–6PM</span>
+  </div>
+</div>
+
+<header>
+  <nav class="nav">
+    <a class="logo" href="index.html">YOUR<span>BIKES</span></a>
+    <div class="nav-links">
+      <a href="inventory.html">Inventory</a>
+      <a href="service.html">Service</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact</a>
+      <a class="nav-cta" href="inventory.html">VIEW BIKES</a>
+    </div>
+  </nav>
+</header>
+
+<section class="page-hero">
+  <div class="page-hero-inner">
+    <div class="eyebrow">Used Motorcycle</div>
+    <h1>2022 Honda Sport</h1>
+    <p>Clean, inspected and ready for its next owner.</p>
+  </div>
+</section>
+
+<section class="bike-page">
+  <div class="container">
+    <div class="bike-detail">
+
+      <div>
+        <div class="bike-main-image">
+          <img id="mainBikeImage" src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=1200&q=85" alt="2022 Honda Sport">
+        </div>
+        <div class="bike-thumbs">
+          <div class="bike-thumb active">
+            <img src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=300&q=80" alt="">
+          </div>
+          <div class="bike-thumb">
+            <img src="https://images.unsplash.com/photo-1558980394-0c6a1c2d6a27?auto=format&fit=crop&w=300&q=80" alt="">
+          </div>
+        </div>
+      </div>
+
+      <div class="bike-info">
+        <span class="tag">Featured</span>
+        <h1>2022 Honda Sport</h1>
+        <p class="specs">12,450 miles • Manual • Black</p>
+        <div class="bike-price">$9,995</div>
+
+        <div class="bike-spec-grid">
+          <div class="bike-spec"><strong>Year</strong><span>2022</span></div>
+          <div class="bike-spec"><strong>Make</strong><span>Honda</span></div>
+          <div class="bike-spec"><strong>Mileage</strong><span>12,450</span></div>
+          <div class="bike-spec"><strong>Transmission</strong><span>Manual</span></div>
+          <div class="bike-spec"><strong>Color</strong><span>Black</span></div>
+          <div class="bike-spec"><strong>Stock #</strong><span>BIKE-2201</span></div>
+        </div>
+
+        <div class="notice">
+          <strong>Interested in this motorcycle?</strong><br>
+          Call us or send an inquiry to check availability and schedule a test ride.
+        </div>
+
+        <div class="buttons">
+          <a class="btn btn-red" href="contact.html">Ask About This Bike</a>
+          <a class="btn btn-dark" href="tel:5555555555">Call Dealer</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  document.querySelectorAll('.bike-thumb').forEach(thumb => {
+    thumb.addEventListener('click', () => {
+      document.querySelectorAll('.bike-thumb').forEach(t => t.classList.remove('active'));
+      thumb.classList.add('active');
+      document.getElementById('mainBikeImage').src = thumb.querySelector('img').src.replace('w=300','w=1200');
+    });
+  });
+</script>
+
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="logo">YOUR<span style="color:var(--red)">BIKES</span></div>
+      <p style="margin-top:12px;">Quality used motorcycles and professional motorcycle service.</p>
+    </div>
+    <div>
+      <h3>Shop</h3>
+      <ul>
+        <li><a href="inventory.html">Used Motorcycles</a></li>
+        <li><a href="contact.html">Sell / Trade</a></li>
+        <li><a href="financing.html">Financing</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Service</h3>
+      <ul>
+        <li><a href="service.html">Service Department</a></li>
+        <li><a href="contact.html">Book Appointment</a></li>
+        <li><a href="service.html">Parts & Accessories</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Contact</h3>
+      <ul>
+        <li>123 Main Street</li>
+        <li>Your City, FL 00000</li>
+        <li>(555) 555-5555</li>
+        <li>info@yourbikeshop.com</li>
+      </ul>
+    </div>
+  </div>
+  <div class="copyright">© 2026 Your Bikes. All Rights Reserved.</div>
+</footer>
+</body>
+</html>

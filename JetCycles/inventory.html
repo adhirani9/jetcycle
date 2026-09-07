@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inventory | JetCycle</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ <div class="topbar">
+    <div class="topbar-inner">
+      <span>📍 2920 W Airport BLVD Sanford, FL 32771</span>
+      <span>📞 (407) 927-0773  &nbsp; | &nbsp; Mon–Sat 10AM–6PM</span>
+    </div>
+  </div>
+
+<header>
+  <nav class="nav">
+    <a class="logo" href="index.html">Jet<span>Cycle</span></a>
+    <div class="nav-links">
+      <a href="inventory.html">Inventory</a>
+      <a href="service.html">Service</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact</a>
+      <a class="nav-cta" href="inventory.html">VIEW BIKES</a>
+    </div>
+  </nav>
+</header>
+
+<section class="section-head">
+  <div class="page-hero-inner">
+    <div class="eyebrow">Pre-Owned Motorcycles</div>
+    <h1>Our Inventory</h1>
+    <p>Browse our current selection of inspected, serviced and ready-to-ride motorcycles.</p>
+  </div>
+</section>
+
+<section class="inventory">
+  <div class="container">
+
+    <!--
+      ==========================
+      EASY INVENTORY EDITING
+      ==========================
+      To add a motorcycle:
+      1. Copy one .card below.
+      2. Change the data-* values.
+      3. Change the title, specs, price and image.
+      4. Change the link to the bike's detail page.
+
+      The filters below automatically use:
+      data-make, data-type, data-price.
+    -->
+
+    <div class="inventory-toolbar">
+      <div class="filters">
+        <select id="makeFilter">
+          <option value="all">All Makes</option>
+          <option value="honda">Honda</option>
+          <option value="yamaha">Yamaha</option>
+          <option value="kawasaki">Kawasaki</option>
+          <option value="harley">Harley-Davidson</option>
+        </select>
+
+        <select id="typeFilter">
+          <option value="all">All Types</option>
+          <option value="sport">Sport</option>
+          <option value="cruiser">Cruiser</option>
+          <option value="adventure">Adventure</option>
+          <option value="touring">Touring</option>
+        </select>
+
+        <select id="priceFilter">
+          <option value="all">Any Price</option>
+          <option value="under10000">Under $10,000</option>
+          <option value="10000-15000">$10,000–$15,000</option>
+          <option value="over15000">Over $15,000</option>
+        </select>
+      </div>
+
+      <div class="inventory-count"><span id="bikeCount">6</span> motorcycles</div>
+    </div>
+
+    <div class="cards" id="inventoryGrid">
+
+      <!-- BIKE 1 -->
+      <article class="card inventory-bike" data-make="honda" data-type="sport" data-price="9995">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=900&q=80" alt="Honda sport motorcycle">
+        </div>
+        <div class="card-body">
+          <span class="tag">Featured</span>
+          <h3>2022 Honda Sport</h3>
+          <div class="specs">12,450 miles • Manual • Black</div>
+          <div class="price">$9,995</div>
+          <a class="btn btn-dark" href="bike.html">View Bike</a>
+        </div>
+      </article>
+
+      <!-- BIKE 2 -->
+      <article class="card inventory-bike" data-make="harley" data-type="cruiser" data-price="11499">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?auto=format&fit=crop&w=900&q=80" alt="Cruiser motorcycle">
+        </div>
+        <div class="card-body">
+          <span class="tag">Just Arrived</span>
+          <h3>2020 Harley Cruiser</h3>
+          <div class="specs">8,210 miles • Manual • Red</div>
+          <div class="price">$11,499</div>
+          <a class="btn btn-dark" href="bike.html">View Bike</a>
+        </div>
+      </article>
+
+      <!-- BIKE 3 -->
+      <article class="card inventory-bike" data-make="yamaha" data-type="adventure" data-price="8799">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1558980394-0c6a1c2d6a27?auto=format&fit=crop&w=900&q=80" alt="Adventure motorcycle">
+        </div>
+        <div class="card-body">
+          <span class="tag">Great Value</span>
+          <h3>2019 Yamaha Adventure</h3>
+          <div class="specs">16,700 miles • Manual • Gray</div>
+          <div class="price">$8,799</div>
+          <a class="btn btn-dark" href="bike.html">View Bike</a>
+        </div>
+      </article>
+
+      <!-- BIKE 4 -->
+      <article class="card inventory-bike" data-make="kawasaki" data-type="sport" data-price="13499">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1609630875171-b1321377ee65?auto=format&fit=crop&w=900&q=80" alt="Sport motorcycle">
+        </div>
+        <div class="card-body">
+          <span class="tag">Low Miles</span>
+          <h3>2023 Kawasaki Sport</h3>
+          <div class="specs">4,850 miles • Manual • Green</div>
+          <div class="price">$13,499</div>
+          <a class="btn btn-dark" href="bike.html">View Bike</a>
+        </div>
+      </article>
+
+      <!-- BIKE 5 -->
+      <article class="card inventory-bike" data-make="harley" data-type="touring" data-price="16995">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=900&q=80" alt="Touring motorcycle">
+        </div>
+        <div class="card-body">
+          <span class="tag">Premium</span>
+          <h3>2021 Harley Touring</h3>
+          <div class="specs">10,100 miles • Manual • Black</div>
+          <div class="price">$16,995</div>
+          <a class="btn btn-dark" href="bike.html">View Bike</a>
+        </div>
+      </article>
+
+      <!-- BIKE 6 -->
+      <article class="card inventory-bike" data-make="honda" data-type="cruiser" data-price="7495">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1558980394-4c7c9299fece?auto=format&fit=crop&w=900&q=80" alt="Cruiser motorcycle">
+        </div>
+        <div class="card-body">
+          <span class="tag">Great Value</span>
+          <h3>2018 Honda Cruiser</h3>
+          <div class="specs">21,400 miles • Manual • Blue</div>
+          <div class="price">$7,495</div>
+          <a class="btn btn-dark" href="bike.html">View Bike</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<script>
+  const makeFilter = document.getElementById('makeFilter');
+  const typeFilter = document.getElementById('typeFilter');
+  const priceFilter = document.getElementById('priceFilter');
+  const bikes = [...document.querySelectorAll('.inventory-bike')];
+  const count = document.getElementById('bikeCount');
+
+  function matchesPrice(price, filter) {
+    if (filter === 'all') return true;
+    if (filter === 'under10000') return price < 10000;
+    if (filter === '10000-15000') return price >= 10000 && price <= 15000;
+    if (filter === 'over15000') return price > 15000;
+    return true;
+  }
+
+  function filterInventory() {
+    let visible = 0;
+
+    bikes.forEach(bike => {
+      const makeMatch = makeFilter.value === 'all' || bike.dataset.make === makeFilter.value;
+      const typeMatch = typeFilter.value === 'all' || bike.dataset.type === typeFilter.value;
+      const priceMatch = matchesPrice(Number(bike.dataset.price), priceFilter.value);
+
+      const show = makeMatch && typeMatch && priceMatch;
+      bike.classList.toggle('hidden', !show);
+      if (show) visible++;
+    });
+
+    count.textContent = visible;
+  }
+
+  [makeFilter, typeFilter, priceFilter].forEach(el => {
+    el.addEventListener('change', filterInventory);
+  });
+</script>
+
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="logo">Jet<span style="color:var(--red)">Cycle</span></div>
+      <p style="margin-top:12px;">Quality used motorcycles and professional motorcycle service.</p>
+    </div>
+    <div>
+      <h3>Shop</h3>
+      <ul>
+        <li><a href="inventory.html">Used Motorcycles</a></li>
+        <li><a href="contact.html">Sell / Trade</a></li>
+        <li><a href="financing.html">Financing</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Service</h3>
+      <ul>
+        <li><a href="service.html">Service Department</a></li>
+        <li><a href="contact.html">Book Appointment</a></li>
+        <li><a href="service.html">Parts & Accessories</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Contact</h3>
+      <ul>
+        <li>2920 W Airport BLVD</li>
+        <li>Sanford, FL 32771</li>
+        <li>(407) 927-0773</li>
+        <li>info@yourbikeshop.com</li>
+      </ul>
+    </div>
+  </div>
+  <div class="copyright">© 2026 JetCycle. All Rights Reserved.</div>
+</footer>
+</body>
+</html>
